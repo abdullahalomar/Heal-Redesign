@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/* banner button */
+.color-text{
+    color: #FA5406;
+    font-weight: 600;
+    font-size: large;
+}
+.banner-content{
+    padding-left: 120px;
+    font-weight: 200;
+    margin-top: 7%;
+}
+.heading{
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+}
+.button-1{
+    text-decoration: none;
+    background-color: #FB5608;
+    color: white;
+    padding: 10px 30px 15px 30px;
+    margin-right: 10px;
+}
+.button-2{
+    text-decoration: none;
+    color: #FB5608;
+    padding: 10px 30px 15px 30px;
+    border: 1px solid #FB5608;
+}
+/* banner button */
+/* banner img */
+
+/* banner img */
+/* banner card img */
+.banner-card {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.icon-img{
+    width: 25px;
+}
+/* banner card img */
+/* side-bar */
+.side-bar{
+    width: 50px;
+    height: 700px;
+    background-color: #FFFFFF;
+}
+.side-icon{
+    padding-top: 190px;
+}
+.side-bar-icons{
+   margin-top: 60px;
+   width: 21px;
+}
+/* side-bar */
+/* banner-card */
+
+/* banner-card */
+#home{
+    background-image: url(images/Banner\ Image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.plant-image img{
+    width: 200px;
+}
+
+/* about */
+.first-cards{
+    margin-top: 10%;
+}
+
+.about-card{
+    display: flex;
+    gap: 20px;
+    /* margin-left: 8%; */
+    justify-content: center;
+}
+
+.inner-side{
+    padding: 20px;
+    border: none;
+}
+
+/* only-card-sec */
+.card{
+    border: none;
+}
+
+/* testimonial */
+
+.testimonial-slider .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    background-color: #dc3545;
+    border-radius: 100%;
+}
+.testimonial-slider {
+    padding: 10px 0px 40px;
+}
+
+/* according */
+.accordion-item{
+    border: none;
+}
+
+/* heal-story */
+
+
+.story-btn{
+    height: 51px;
+    width: 192px;
+    left: 48px;
+    top: 220px;
+    border-radius: 0px;
+    padding: 8px 30px 8px 30px;
+    background-color: #FA5406;
+    text-decoration: none;
+    color: white;
+}
+
+/* connect */
+.connect{
+    height: 51px;
+    width: 192px;
+    left: 48px;
+    top: 220px;
+    border-radius: 0px;
+    padding: 8px 30px 8px 30px;
+    background-color: #FA5406;
+    text-decoration: none;
+    color: white;
+}
+
+
+
