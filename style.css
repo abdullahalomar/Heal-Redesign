@@ -1,6 +1,23 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+/* heading, title, and p */
+.heading{
+    font-weight: 800;
+    font-size: 50px;
+}
+.heading-text{
+    font-weight: 700;
+    font-size: 37px;
+}
+.card-title{
+    font-weight: 700;
+    font-size: 21px;
+}
+.card-text{
+    font-size:small;
 }
 /* banner button */
 .color-text{
@@ -10,45 +27,40 @@ body{
 }
 .banner-content{
     padding-left: 120px;
-    font-weight: 200;
     margin-top: 7%;
 }
-.heading{
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
-    font-size: 50px;
+
+#btn-1{
+  background-color: #FB5608;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 10px 12px;
 }
-.heading-text{
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 37px;
-}
-.button-1{
-    text-decoration: none;
-    background-color: #FB5608;
-    color: white;
-    padding: 10px 30px 15px 30px;
-    margin-right: 10px;
-}
-.button-2{
-    text-decoration: none;
-    color: #FB5608;
-    padding: 10px 30px 15px 30px;
-    border: 1px solid #FB5608;
+#btn-2{
+  text-decoration: none;
+  color: #FB5608;
+  border:1px solid #FB5608;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 10px  12px ;
 }
 /* banner button */
 /* banner img */
-
+.banner-img{
+   margin-top: 300px;
+}
 /* banner img */
 /* banner card img */
 .banner-card {
-    display: grid;
+    /* display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
-    padding: 10px;
+    padding: 10px; */
 }
 .icon-img{
-    width: 25px;
+    width: 27px;
 }
 /* banner card img */
 /* side-bar */
@@ -120,12 +132,7 @@ body{
 
 /* heal-story */
 
-
 .story-btn{
-    height: 51px;
-    width: 192px;
-    left: 48px;
-    top: 220px;
     border-radius: 0px;
     padding: 8px 30px 8px 30px;
     background-color: #FA5406;
@@ -135,16 +142,18 @@ body{
 
 /* connect */
 .connect{
-    height: 51px;
-    width: 192px;
-    left: 48px;
-    top: 220px;
     border-radius: 0px;
     padding: 8px 30px 8px 30px;
     background-color: #FA5406;
+}
+.connect a{
     text-decoration: none;
     color: white;
 }
 
+
+@media screen and (max-width: 576px) {
+
+}
 
 
