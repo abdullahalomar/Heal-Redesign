@@ -3,6 +3,11 @@ body{
     padding: 0;
     font-family: 'Inter', sans-serif;
 }
+/* swap */
+.spread-out{
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+  }
 /* heading, title, and p */
 .heading{
     font-weight: 800;
