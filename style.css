@@ -70,18 +70,17 @@ body{
     background-color: #FFFFFF;
 }
 .side-icon{
-    padding-top: 190px;
+   margin-top: 250px;
 }
 .side-bar-icons{
-   margin-top: 60px;
-   width: 21px;
+    padding-bottom: 55px;
 }
 /* side-bar */
 /* banner-card */
 
 /* banner-card */
 #home{
-    background-image: url(images/Mask\ group-1.png);
+    background-image: url(images/Banner\ Image.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -154,8 +153,33 @@ body{
 
 @media screen and (max-width: 576px) {
      .banner-image{
-        display: block;
+        position: absolute;
+        top: 0px;
+        z-index: -1;
      }
+     .side-bar{
+        /* margin-bottom: 100%; */
+        width: 50px;
+        height: 250px;
+        background-color: #FFFFFF;
+     }
+     .side-icon{
+        margin-top: 50px;
+     }
+     .side-bar-icons{
+        padding-bottom: 30px;
+    }
+    #home{
+        background-image: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+   
+    .banner-content{
+        margin-top: 350px;
+        padding-left: 70px;
+    }
 }
 @media screen and (min-width: 576px) {
     .banner-image{
