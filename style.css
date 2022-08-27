@@ -53,16 +53,12 @@ body{
 }
 /* banner img */
 /* banner card img */
-.banner-card {
-    /* display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    padding: 10px; */
-}
 .icon-img{
     width: 27px;
 }
 /* banner card img */
+/* card */
+
 /* side-bar */
 .side-bar{
     width: 50px;
