@@ -10,6 +10,11 @@ body {
 }
 
 /* swap-slider */
+.swap-side{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 .swap-background{
   background-image: url(/images/Property\ 1=03.png);
 }
