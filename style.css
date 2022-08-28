@@ -10,6 +10,9 @@ body {
 }
 
 /* swap-slider */
+.swap-heading{
+  font-weight: 700;
+}
 .swap-side{
   position: -webkit-sticky;
   position: sticky;
@@ -21,7 +24,7 @@ body {
 .side-bar-swap {
   width: 50px;
   height: 805px;
-  background-color: #d37a7a;
+  background-color: #ffffff;
 }
 .side-icon-swap {
   padding-top: 110px;
