@@ -59,7 +59,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
            backgroundSize: "cover",
            backgroundPosition: "center",
            transition: "opacity " + base.options.speed + "s ease-out",
-           opacity: 0
+           opacity: 1
          }).addClass("scrollBackgroundHolder");
 
          placeHolder.appendTo(base.$el);
