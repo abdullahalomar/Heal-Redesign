@@ -10,6 +10,7 @@ body {
 }
 
 /* swap-slider */
+
 .swap-heading{
   font-weight: 700;
 }
@@ -33,7 +34,9 @@ body {
 .side-bar-icons-swap {
   padding-bottom: 55px;
 }
-
+.fourth-head{
+  
+}
 /* heading, title, and p */
 .heading {
   font-weight: 800;
