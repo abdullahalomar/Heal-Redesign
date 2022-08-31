@@ -185,7 +185,13 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   height: 70vh;
-
+   width: 100%;
+  }
+  .page-wrapper{
+    height: 300px !important;
+  }
+  .sample-docs{
+    height: 300px !important;
   }
 }
 
@@ -227,7 +233,7 @@ body {
   } */
 }
 @media screen and (min-width: 780px) {
-  .res-banner-img{
+  .res-banner-top{
     display: none;
   }
 }
