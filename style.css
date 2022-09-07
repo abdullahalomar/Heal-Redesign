@@ -127,11 +127,19 @@ body {
   padding: 20px;
   border: none;
 }
+.heal-about-top{
+  margin-top: 10%;
+}
 
 /* heal-flow */
-
+.heal-flow-top{
+  margin-top: 10%;
+}
 
 /* only-card-sec */
+.only-card-top{
+  margin-top: 8%;
+}
 .card {
   border: none;
 }
@@ -223,6 +231,7 @@ body {
   .connect-img{
     width: 300px;
   }
+  
 }
 
 
