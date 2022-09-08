@@ -34,6 +34,42 @@
       transition-property: opacity, transform;
       transition-property: opacity, transform, -webkit-transform;
     }
+
+    .top_scroll_section::-webkit-scrollbar {
+      display: none;
+    }
+
+    .top_scroll_section {
+      /* height: 100vh;
+      overflow-y: scroll; */
+      background-image: url('images/animation-4.png');
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .section_one {
+      height: 76vh;
+      position: relative;
+    }
+
+    .banner-content {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .big-pot{
+      position: fixed;
+      bottom:50px;
+      right:0;
+      opacity: 0;
+    }
+    .big-pot img{
+       width:270px;
+    }
   </style>
   <title>Heal-Redesign</title>
 
@@ -71,25 +107,25 @@
       </div>
     </div>
   </div>
-   <section class="swap-scroll">
+  <!-- <section class="swap-scroll">
     <div class="scroll-graphic container-fluid position-relative">
-
-      <div class="row d-flex flex-column justify-content-center align-items-center res-img">
-        <div class="graphic-text-box col-md-12 col-sm-12 spread-out res-data-img">
+      <div class="row d-flex flex-column justify-content-center align-items-center ">
+        <div class="graphic-text-box col-md-12 col-sm-12 spread-out" data-image="images/animation-1.png">
           <div class="row justify-content-between">
-
-             <div class="side-bar">
+            <div class="side-bar">
               <div class="side-icon">
                 <a href="#"><img class="side-bar-icons" src="images/icons/side-bar-icon-1.png" width="21px" alt=""></a>
-                <a href="mailto:abdullahalomar048@gmail.com"><img class="side-bar-icons"
-                    src="images/icons/Vector (1).png" width="21px" alt=""></a>
-                <a href="https://www.instagram.com"><img class="side-bar-icons" src="images/icons/Group.png"
-                    width="21px" alt=""></a>
-                <a href="https://www.facebook.com"><img class="side-bar-icons" src="images/icons/Vector.png"
-                    width="21px" alt=""></a>
+                <a href="mailto:abdullahalomar048@gmail.com"><img class="side-bar-icons" src="images/icons/Vector (1).png" width="21px" alt=""></a>
+                <a href="https://www.instagram.com"><img class="side-bar-icons" src="images/icons/Group.png" width="21px" alt=""></a>
+                <a href="https://www.facebook.com"><img class="side-bar-icons" src="images/icons/Vector.png" width="21px" alt=""></a>
               </div>
             </div>
-            <!-- sidebar end -->
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex flex-column justify-content-center align-items-center res-img">
+        <div class="graphic-text-box col-md-12 col-sm-12 spread-out " data-image="images/animation-3.png">
+          <div class="row justify-content-between">
             <div class="col-md-10 banner-content text-center">
               <h1 class="heading-swap">Mental health is more of a <br> priority now than ever before</h1>
             </div>
@@ -98,88 +134,9 @@
           </div>
         </div>
       </div>
-
-      <div class="row d-flex flex-column justify-content-center align-items-center ">
-        <div class="graphic-text-box col-md-12 col-sm-12 spread-out res-data-img">
-          <div class="row justify-content-between">
-            <div class="col-md-10 banner-content text-center">
-              <h1 class="heading-swap">Yet we continue to neglect it</h1>
-            </div>
-            <div class="col-md-5  banner-img">
-            </div>
-          </div>
-        </div>
       </div>
-
-      <div class="row d-flex flex-column justify-content-center align-items-center swap-card">
-        <div class="graphic-text-box col-md-12 col-sm-12 spread-out res-data-img">
-          <div class="row justify-content-between">
-            <div class="col-md-10 banner-content text-center">
-              <h1 class="heading-swap">Not anymore</h1>
-            </div>
-            <div class="col-md-5  banner-img">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row d-flex flex-column justify-content-center align-items-center ">
-        <div class="graphic-text-box col-md-12 col-sm-12 spread-out res-data-img">
-          <div class="row justify-content-between">
-            <div class="col-md-6 banner-content">
-              <h1 class="heading">Hello Heal</h1>
-              <p class="mb-4 card-text">Heal is an immersive, multi-sensory meditation portal to improve mental health and sustain peak performance.
-              </p>
-              <a href="#home" style="text-decoration: none; color:#fb5608"> <img
-                  src="images/icons/icons8-right-arrow-50.png" alt="" style="width: 2%;"> See More</a>
-            </div>
-            <div class="col-md-5  banner-img">
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-    </div>
-  </section>
-
-  <!-- for responsive -->
-
-  <!-- top section -->
-  <section class="container-fluid" id="home">
-    <div class="banner-content2" style="background-image: url(images/animation-5.png);">
-      <div class="row justify-content-start">
-        <div class="col-6 col-md-6" style="margin-left: 200px; padding-top: 48px;">
-          <p><span class="color-text">Welcome Home</span></p>
-          <h1 class="heading">Your Personal <br> Wellness Retreat</h1>
-          <p class="mb-4 card-text">Heal is an immersive, multi-sensory meditation portal to improve mental health
-            and sustain peak performance.
-          </p>
-          <div class="d-flex gap-3">
-            <button type="button" class="btn btn-link" id="btn-1">Reserve For $199*</button>
-            <button type="button" class="btn btn-link" id="btn-2">Get Launch Update</button>
-          </div>
-          <div class="col-md-10 mt-4">
-            <div class="row gap-3">
-              <div class="card text-center shadow-sm rounded col-md-3" style="width: 9rem; height: 6rem;">
-                <div class="card-body">
-                  <img class="icon-img" src="images/icons/schedule.png" alt="">
-                  <p class="card-text">Free Trial</p>
-                </div>
-              </div>
-              <div class="card text-center shadow-sm rounded col-md-3" style="width: 9rem; height: 6rem;">
-                <div class="card-body">
-                  <img class="icon-img" src="images/icons/icons8-therapy-64.png" alt="">
-                  <p class="card-text">Therapy integration
-                  </p>
-                </div>
-              </div>
-              <div class="card text-center shadow-sm rounded col-md-3" style="width: 9rem; height: 6rem;">
-                <div class="card-body">
-                  <img class="icon-img" src="images/icons//shield-check (1).png" alt="">
-                  <p class="card-text">Safe space</p>
-                </div>
-              </div>
+  </section> -->
 
 
   <section class="container-fluid position-relative" id="home">
@@ -242,6 +199,7 @@
         </div>
       </div>
     </div>
+
   </section>
   <!-- top section end -->
   <!-- mobile top section -->
@@ -323,15 +281,9 @@
   <!-- about-heal -->
   <section class="container mt-5">
     <h1 class="text-center heading-text">About Heal</h1>
-    <div class="row row-cols-sm-1 row-cols-md-2 heal-about-top">
-      <div class="about-card-margin"
-        data-aos="fade-up" 
-        data-aos-offset="0" 
-        data-aos-delay="20" 
-        data-aos-duration="800"
-        data-aos-easing="ease-in-out" 
-        data-aos-mirror="true" 
-        data-aos-once="false"
+    <div class="row row-cols-sm-1 row-cols-md-2 mt-5">
+      <div class="about-card-margin" data-aos="fade-up" data-aos-offset="0" data-aos-delay="20" data-aos-duration="800"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
         data-aos-anchor-placement="top-center">
         <div class="card shadow-sm rounded mb-4">
           <img src="images/Placeholder.png" class="card-img-top" alt="...">
@@ -350,10 +302,7 @@
           </div>
         </div>
       </div>
-      <div 
-      data-aos="fade-down"
-      data-aos-easing="linear"
-      data-aos-duration="1000">
+      <div>
         <div class="card shadow-sm rounded mb-4">
           <img src="images/Placeholder (1).png" class="card-img-top" alt="...">
           <div class="card-body">
@@ -385,11 +334,10 @@
   <!-- heal-flow -->
   <section class="container mt-5">
     <h1 class="text-center heading-text">Heal Flow</h1>
-    <div class="row row-cols-sm-1 row-cols-md-2 heal-flow-top">
-      <div class="about-card-margin" 
-      data-aos="fade-down"
-      data-aos-easing="linear"
-      data-aos-duration="1000">
+    <div class="row row-cols-sm-1 row-cols-md-2 mt-5">
+      <div class="about-card-margin" data-aos="fade-up" data-aos-offset="0" data-aos-delay="20" data-aos-duration="800"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">
         <div class="card shadow-sm rounded mb-4">
           <img src="images/Placeholder (4).png" class="card-img-top" alt="...">
           <div class="card-body">
@@ -406,15 +354,7 @@
           </div>
         </div>
       </div>
-      <div 
-      data-aos="fade-up" 
-      data-aos-offset="0" 
-      data-aos-delay="20" 
-      data-aos-duration="800"
-      data-aos-easing="ease-in-out" 
-      data-aos-mirror="true" 
-      data-aos-once="false"
-      data-aos-anchor-placement="top-center">
+      <div>
         <div class="card shadow-sm rounded mb-4">
           <img src="images/Placeholder (6).png" class="card-img-top" alt="...">
           <div class="card-body">
@@ -436,11 +376,11 @@
   <!-- heal-flow -->
 
   <!-- only-card-sec -->
-  <section class="container only-card-top">
+  <section class="container mt-5 mb-5">
     <div class="col-md-9 mx-auto">
-      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4">
+      <div class="only-card-w row row-cols-2 row-cols-sm-2 row-cols-md-4 row-cols-lg-4">
         <div>
-          <div class="card text-center shadow-sm rounded" style="width: 12rem; padding: 13px 0;">
+          <div class="card text-center shadow-sm rounded" style="width: 12rem; padding: 14px 0;">
             <div class="card-body">
               <img class="icon-img" src="images/icons/board-performance-profit-svgrepo-com.png" alt="">
               <p class="card-text mt-3">Live Meditations</p>
@@ -494,59 +434,58 @@
   <!-- testimonial -->
   <section class="testimonial-slider container">
     <h1 class="text-center heading-text">Heal Reviews</h1>
-    <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
-      
-      <div class="carousel-inner py-5 text-center">
-        <div class="carousel-item active shadow-sm">
-          <i class="bi bi-chat-right-quote fs-1 text-danger"></i>
-          <figure class="text-cent col-md-6 offset-md-3 mt-4">
-            <h5>It was a very good experience</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
-              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis
-              felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse
-              sed magna eget nibh in turpis. Consequat duis diam lacus arcu. urpis orci lectus maecenas. Suspendisse sed
-              magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus
-              pellentesque enim arcu</p>
-
-            <!-- <figcaption class="blockquote-footer mt-2">Jonh Son</figcaption> -->
-          </figure>
-        </div>
-        <div class="carousel-item shadow-sm">
-          <i class="bi bi-chat-right-quote fs-1 text-danger"></i>
-          <figure class="text-cent col-md-6 offset-md-3 mt-4">
-            <h5>It was a very good experience</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
-              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis
-              felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse
-              sed magna eget nibh in turpis. Consequat duis diam lacus arcu. urpis orci lectus maecenas. Suspendisse sed
-              magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus
-              pellentesque enim arcu</p>
-
-            <!-- <figcaption class="blockquote-footer mt-2">Jonh Son</figcaption> -->
-          </figure>
-        </div>
-        <div class="carousel-item shadow-sm">
-          <i class="bi bi-chat-right-quote fs-1 text-danger"></i>
-          <figure class="text-cent col-md-6 offset-md-3 mt-4">
-            <h5>It was a very good experience</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
-              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis
-              felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse
-              sed magna eget nibh in turpis. Consequat duis diam lacus arcu. urpis orci lectus maecenas. Suspendisse sed
-              magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus
-              pellentesque enim arcu</p>
-
-            <!-- <figcaption class="blockquote-footer mt-2">Jonh Son</figcaption> -->
-          </figure>
-        </div>
-      </div>
-      <div class="carousel-indicators">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators shadow rounded">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1" style="background-image: url(images/icons/left-arrow--32.png); background-repeat: no-repeat;"></button>
-        <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button> -->
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3" style="background-image: url(images/icons/right-arrow-30.png); background-repeat: no-repeat;"></button>
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner py-5 text-center">
+        <div class="carousel-item active">
+          <i class="bi bi-chat-right-quote fs-1 text-danger"></i>
+          <figure class="text-cent col-md-6 offset-md-3 mt-4">
+            <h5>It was a very good experience</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
+              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis
+              felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse
+              sed magna eget nibh in turpis. Consequat duis diam lacus arcu. urpis orci lectus maecenas. Suspendisse sed
+              magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus
+              pellentesque enim arcu</p>
+
+            <!-- <figcaption class="blockquote-footer mt-2">Jonh Son</figcaption> -->
+          </figure>
+        </div>
+        <div class="carousel-item">
+          <i class="bi bi-chat-right-quote fs-1 text-danger"></i>
+          <figure class="text-cent col-md-6 offset-md-3 mt-4">
+            <h5>It was a very good experience</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
+              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis
+              felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse
+              sed magna eget nibh in turpis. Consequat duis diam lacus arcu. urpis orci lectus maecenas. Suspendisse sed
+              magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus
+              pellentesque enim arcu</p>
+
+            <!-- <figcaption class="blockquote-footer mt-2">Jonh Son</figcaption> -->
+          </figure>
+        </div>
+        <div class="carousel-item">
+          <i class="bi bi-chat-right-quote fs-1 text-danger"></i>
+          <figure class="text-cent col-md-6 offset-md-3 mt-4">
+            <h5>It was a very good experience</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
+              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis
+              felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse
+              sed magna eget nibh in turpis. Consequat duis diam lacus arcu. urpis orci lectus maecenas. Suspendisse sed
+              magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus
+              pellentesque enim arcu</p>
+
+            <!-- <figcaption class="blockquote-footer mt-2">Jonh Son</figcaption> -->
+          </figure>
+        </div>
       </div>
     </div>
   </section>
@@ -668,8 +607,8 @@
   <!-- heal-story -->
   <div class="container my-5">
     <h1 class="text-center heading-text my-5">Heal Story</h1>
-    <div class="d-flex flex-wrap justify-content-center gap-3">
-      <div class="col-sm-5 shadow-sm">
+    <div class="row mx-auto" style="width: 82%;">
+      <div class="col-sm-6 shadow rounded-2">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Who we are</h5>
@@ -680,7 +619,7 @@
         </div>
       </div>
 
-      <div class="col-sm-5 shadow-sm">
+      <div class="col-sm-6 shadow rounded-2">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Vision</h5>
@@ -696,13 +635,13 @@
 
   <!-- picture & connect -->
   <div class="container" style="margin-top: 10%;">
-    <div class="d-flex flex-wrap justify-content-center gap-3 ">
-      <div class="col-sm-5 shadow-sm">
+    <div class="row mx-auto" style="width: 82%;">
+      <div class="col-sm-6 shadow rounded-2">
         <div class="card">
-          <img class="connect-img" src="images/Group 10.png" alt="">
+          <img src="images/Group 10.png" alt="">
         </div>
       </div>
-      <div class="col-sm-5 shadow-sm">
+      <div class="col-sm-6 shadow rounded-2">
         <div class="card">
           <div class="card-body">
             <h2 class="card-title">Let’s Connect</h2>
@@ -726,13 +665,13 @@
             </div>
             <div class="d-flex  justify-content-center mt-4 align-items-center">
               <div class="pe-5">
-                <img src="images/icons/Facebook - Negative.png" width="30px" alt="">
+                <img src="images/icons/Vector.png" width="40px" alt="">
               </div>
               <div class="pe-5">
-                <img src="images/icons/Instagram - Negative (1).png" width="30px" alt="">
+                <img src="images/icons/Group.png" width="40px" alt="">
               </div>
               <div>
-                <img src="images/icons/mail-negative.png" width="30px" alt="">
+                <img src="images/icons/Vector (1).png" width="40px" alt="">
               </div>
             </div>
           </div>
@@ -1037,37 +976,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></scrip>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
-  <script defer>
-    const images = {
-      md: [
-        'images/animation-4.png',
-        'images/animation-3.png',
-        'images/animation-2.png',
-        'images/animation-1.png',
-      ],
-      sm: [
-        'images/banner-res-4.png',
-        'images/banner-res-3.png',
-        'images/banner-res-2.png',
-        'images/banner-res-1.png',
-      ]
-    }
-    let graphicTextBoxes = document.getElementsByClassName('graphic-text-box');
-    const setImages = (elements, images) => {
-      i = 0;
-      for (el of elements) {
-        el.dataset.image = images[i]
-        i++
-      }
-    }
-
-    let isMobileDevice = window.matchMedia("only screen and (max-width: 760px)").matches;
-    if (isMobileDevice) {
-      setImages(graphicTextBoxes, images.sm)
-    } else {
-      setImages(graphicTextBoxes, images.md)
-    }
-  </script>
 </body>
 
 </html>
