@@ -113,7 +113,7 @@
   <!-- for responsive -->
 
   <!-- top section -->
-  <section class="container-fluid position-relative" id="home" >
+  <section class="container-fluid position-relative" id="home">
     <div class="banner-content2" style="background-image: url(images/animation-5.png);">
       <div class="row justify-content-start">
         <div class="col-6 col-md-6" style="margin-left: 200px; padding-top: 48px;">
@@ -388,14 +388,24 @@
   <!-- only-card-sec -->
 
   <!-- heal-insights -->
-  <section class="container">
-    <div class="" id="canvas">
+  <section class="container mb-5">
+    <div class="mb-4" id="canvas">
       <div class="row justify-content-center" id="book-zoom">
         <div class="sample-docs col-md-12">
           <div class="hard"></div>
           <div class="hard"></div>
           <div class="hard p29"></div>
           <div class="hard p30"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-2">
+        <div class="testimonial-indicators">
+          <button role="button" class="book_prev"
+            style="background-image: url(images/icons/left-arrow--32.png); background-repeat: no-repeat;"></button>
+          <button class="book_next"
+            style="background-image: url(images/icons/right-arrow-30.png); background-repeat: no-repeat;"></button>
         </div>
       </div>
     </div>
@@ -406,7 +416,6 @@
   <section class="testimonial-slider container">
     <h1 class="text-center heading-text">Heal Reviews</h1>
     <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
-
       <div class="carousel-inner py-5 text-center">
         <div class="carousel-item active shadow-sm">
           <i class="bi bi-chat-right-quote fs-1 text-danger"></i>
@@ -451,13 +460,10 @@
           </figure>
         </div>
       </div>
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"
+      <div class="testimonial-indicators">
+        <button role="button" class="testimonial_prev"
           style="background-image: url(images/icons/left-arrow--32.png); background-repeat: no-repeat;"></button>
-        <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button> -->
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"
+        <button class="testimonial_next"
           style="background-image: url(images/icons/right-arrow-30.png); background-repeat: no-repeat;"></button>
       </div>
     </div>
@@ -762,10 +768,7 @@
           $('.sample-docs').turn('page', Math.max(1, $(this).slider('value') * 2 - 2));
         }
       });
-
-
       // URIs
-
       Hash.on('^page\/([0-9]*)$', {
         yep: function (path, parts) {
           var page = parts[1];
@@ -774,7 +777,6 @@
             if ($('.sample-docs').turn('is'))
               $('.sample-docs').turn('page', page);
           }
-
         },
         nop: function (path) {
 
@@ -786,25 +788,23 @@
       // Arrows
 
       $(document).keydown(function (e) {
-
         var previous = 37,
           next = 39;
-
         switch (e.keyCode) {
           case previous:
-
             $('.sample-docs').turn('previous');
-
             break;
           case next:
-
             $('.sample-docs').turn('next');
-
             break;
         }
-
       });
-
+      $('.book_prev').click(function () {
+        $('.sample-docs').turn('previous');
+      });
+      $('.book_next').click(function () {
+        $('.sample-docs').turn('next');
+      });
       // Create the flipbook
 
       flipbook.turn({
@@ -979,6 +979,15 @@
     } else {
       setImages(graphicTextBoxes, images.md)
     }
+  </script>
+  <script>
+    $('.testimonial_prev').click(function () {
+      $('#carouselExampleCaptions').carousel('prev');
+    });
+
+    $('.testimonial_next').click(function () {
+      $('#carouselExampleCaptions').carousel('next');
+    });
   </script>
 </body>
 

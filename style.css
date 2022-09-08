@@ -145,7 +145,7 @@ body {
 }
 
 /* testimonial */
-.carousel-indicators{
+.testimonial-indicators{
   position: none;
   right: 0;
   bottom: 0;
@@ -160,10 +160,12 @@ body {
   list-style: none;
 }
 
-.testimonial-slider .carousel-indicators button {
+.testimonial-indicators button {
   width: 30px;
   height: 35px;
-  background-color: #FA5406;
+  background-color: rgb(250, 84, 6);
+  border: 0;
+  margin: 2px;
   
 }
 .testimonial-slider {
