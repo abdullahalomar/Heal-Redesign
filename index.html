@@ -42,11 +42,7 @@
     .top_scroll_section {
       /* height: 100vh;
       overflow-y: scroll; */
-      background-image: url('images/animation-4.png');
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
+
     }
 
     .section_one {
@@ -72,6 +68,18 @@
     .big-pot img {
       width: 270px;
     }
+
+    .fixed_bg {
+      background-image: url('images/animation-4.png');
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      height: 100vh;
+      position: fixed;
+      width: 100%;
+      transition: 1s linear;
+    }
   </style>
   <title>Heal-Redesign</title>
 
@@ -79,6 +87,7 @@
 
 <body>
   <div class="top_scroll_section">
+    <div class="fixed_bg"></div>
     <div class="big-pot">
       <img src="images/big-top.png" alt="">
     </div>
@@ -674,7 +683,7 @@
   <!-- Optional JavaScript-->
   <script type="text/javascript">
     $(document).scroll(function () {
-      let top_scroll_section = $('.top_scroll_section');
+
       let scroll_count = $(this).scrollTop();
       if (scroll_count < 2000 && scroll_count > 600) {
         $('.big-pot').css('opacity', scroll_count / 1500);
@@ -683,13 +692,13 @@
         $('.big-pot').css('opacity', 0);
       }
       if (scroll_count <= 300) {
-        $('.top_scroll_section').css('background-image', 'url(images/animation-4.png)')
+        $('.fixed_bg').css('background-image', 'url(images/animation-4.png)')
       } else if (scroll_count > 300 && scroll_count <= 600) {
-        $('.top_scroll_section').css('background-image', 'url(images/animation-3.png)')
+        $('.fixed_bg').css('background-image', 'url(images/animation-3.png)')
       } else if (scroll_count > 600 && scroll_count <= 900) {
-        $('.top_scroll_section').css('background-image', 'url(images/animation-2.png)')
+        $('.fixed_bg').css('background-image', 'url(images/animation-2.png)')
       } else {
-        $('.top_scroll_section').css('background-image', 'url(images/animation-1.png)')
+        $('.fixed_bg').css('background-image', 'url(images/animation-1.png)')
       }
     });
     function loadApp() {
