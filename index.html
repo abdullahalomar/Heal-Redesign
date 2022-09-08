@@ -91,17 +91,13 @@
     <div class="big-pot">
       <img src="images/big-top.png" alt="">
     </div>
-    <div class="section_one">
-      <div class="banner-content text-center">
-        <h1 class="heading-swap">Mental health is more of a <br> priority now than ever before</h1>
-      </div>
-    </div>
-    <div class="section_one">
+  
+    <div class="section_one" style="height: 300vh;">
       <div class="banner-content text-center">
         <h1 class="heading-swap">Yet we continue to neglect it</h1>
       </div>
     </div>
-    <div class="section_one">
+    <!-- <div class="section_one">
       <div class="banner-content text-center">
         <h1 class="heading-swap">Not anymore</h1>
       </div>
@@ -116,7 +112,7 @@
         <a href="#home" style="text-decoration: none; color:#fb5608"> <img src="images/icons/icons8-right-arrow-50.png"
             alt="" style="width: 2%;"> See More</a>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <!-- for responsive -->
@@ -689,15 +685,20 @@
         $('.big-pot').css('opacity', scroll_count / 1500);
         $('.big-pot').css('right', scroll_count * 100 / 1500);
       } else {
+        
         $('.big-pot').css('opacity', 0);
       }
       if (scroll_count <= 300) {
+        console.log('1');
         $('.fixed_bg').css('background-image', 'url(images/animation-4.png)')
       } else if (scroll_count > 300 && scroll_count <= 600) {
+        console.log('2');
         $('.fixed_bg').css('background-image', 'url(images/animation-3.png)')
       } else if (scroll_count > 600 && scroll_count <= 900) {
+        console.log('3');
         $('.fixed_bg').css('background-image', 'url(images/animation-2.png)')
       } else {
+        console.log('4');
         $('.fixed_bg').css('background-image', 'url(images/animation-1.png)')
       }
     });
