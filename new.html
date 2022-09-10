@@ -47,28 +47,46 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
+      transition: 1s linear;
     }
 
     .section_one {
       height: 76vh;
-      position: relative;
     }
 
     .banner-content {
-      margin: 0;
+      /* margin: 0;
       position: absolute;
       top: 50%;
       -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+      transform: translateY(-50%); */
     }
-    .big-pot{
+
+    .big-pot {
       position: fixed;
-      bottom:50px;
-      right:0;
+      bottom: 50px;
+      right: 0;
       opacity: 0;
     }
-    .big-pot img{
-       width:270px;
+
+    .big-pot img {
+      width: 270px;
+    }
+
+    #header_html {
+      margin: 0;
+      position: fixed;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 20%;
+      transition: 1s linear;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .big-pot {
+        display: none
+      }
     }
   </style>
   <title>Heal-Redesign</title>
@@ -76,35 +94,20 @@
 </head>
 
 <body>
-  <div class="top_scroll_section">
+  <div class="top_scroll_section position-relative">
     <div class="big-pot">
       <img src="images/big-top.png" alt="">
     </div>
-    <div class="section_one">
-      <div class="banner-content text-center">
-        <h1 class="heading-swap">Mental health is more of a <br> priority now than ever before</h1>
-      </div>
+    <div id="header_html">
+      <h1 class='heading-swap'>Mental health is more of a <br> priority now than ever before</h1>
     </div>
     <div class="section_one">
-      <div class="banner-content text-center">
-        <h1 class="heading-swap">Yet we continue to neglect it</h1>
-      </div>
     </div>
     <div class="section_one">
-      <div class="banner-content text-center">
-        <h1 class="heading-swap">Not anymore</h1>
-      </div>
     </div>
     <div class="section_one">
-      <div class="banner-content">
-        <h1 class="heading">Hello Heal</h1>
-        <p class="mb-4 card-text">
-          Heal is an immersive, multi-sensory meditation portal to <br>
-           improve mental health and sustain peak performance.
-        </p>
-        <a href="#home" style="text-decoration: none; color:#fb5608"> <img src="images/icons/icons8-right-arrow-50.png"
-            alt="" style="width: 2%;"> See More</a>
-      </div>
+    </div>
+    <div class="section_one">
     </div>
   </div>
   <!-- <section class="swap-scroll">
@@ -687,30 +690,43 @@
   </footer>
   <!-- footer -->
 
-  <script type="text/javascript" src="../../extras/jquery.min.1.7.js"></script>
-  <script type="text/javascript" src="../../extras/jquery-ui-1.8.20.custom.min.js"></script>
-  <script type="text/javascript" src="../../extras/jquery.mousewheel.min.js"></script>
-  <script type="text/javascript" src="../../extras/modernizr.2.5.3.min.js"></script>
-  <script type="text/javascript" src="../../lib/hash.js"></script>
+  <script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
+  <script type="text/javascript" src="extras/jquery-ui-1.8.20.custom.min.js"></script>
+  <script type="text/javascript" src="extras/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
+  <script type="text/javascript" src="lib/hash.js"></script>
   <!-- Optional JavaScript-->
   <script type="text/javascript">
     $(document).scroll(function () {
-     let top_scroll_section = $('.top_scroll_section');
+      let top_scroll_section = $('.top_scroll_section');
       let scroll_count = $(this).scrollTop();
-      if(scroll_count < 2000 && scroll_count > 600){
-        $('.big-pot').css('opacity', scroll_count/1500);
-        $('.big-pot').css('right', scroll_count*100/1500);
-      }else{
+      if (scroll_count < 2000 && scroll_count > 600) {
+        $('.big-pot').css('opacity', scroll_count / 1500);
+        $('.big-pot').css('right', scroll_count * 100 / 1500);
+      } else {
         $('.big-pot').css('opacity', 0);
       }
       if (scroll_count <= 300) {
-        $('.top_scroll_section').css('background-image', 'url(images/animation-4.png)')
+        $('.top_scroll_section').css('background-image', 'url(images/animation-4.png)');
+        $('#header_html').html("<h1  class='heading-swap'>Mental health is more of a <br> priority now than ever before</h1>");
       } else if (scroll_count > 300 && scroll_count <= 600) {
         $('.top_scroll_section').css('background-image', 'url(images/animation-3.png)')
+        $('#header_html').html("<h1  class='heading-swap'>Yet we continue to neglect it</h1>");
       } else if (scroll_count > 600 && scroll_count <= 900) {
         $('.top_scroll_section').css('background-image', 'url(images/animation-2.png)')
+        $('#header_html').html("<h1  class='heading-swap'>Not anymore</h1>");
+      } else if (scroll_count > 900 && scroll_count <= 1500) {
+        $('.top_scroll_section').css('background-image', 'url(images/animation-1.png)')
+        $('#header_html').html(`<div class="d-flex flex-column justify-content-center align-items-start ms-5 "> <h1 class='heading'>Hello Heal</h1>
+        <p class='mb-4 card-text'>
+          Heal is an immersive, multi-sensory meditation portal to <br>
+          improve mental health and sustain peak performance.
+        </p>
+        <a href='#home' style='text-decoration: none; color:#fb5608;'> <img src='images/icons/icons8-right-arrow-50.png'
+            alt=''' style='width: 2%;'> See More</a></div>`);
       } else {
         $('.top_scroll_section').css('background-image', 'url(images/animation-1.png)')
+        $('#header_html').html('')
       }
     });
     function loadApp() {
@@ -943,8 +959,8 @@
 
     yepnope({
       test: Modernizr.csstransforms,
-      yep: ['../../lib/turn.min.js', 'css/jquery.ui.css'],
-      nope: ['../../lib/turn.html4.min.js', 'css/jquery.ui.html4.css'],
+      yep: ['lib/turn.min.js', 'css/jquery.ui.css'],
+      nope: ['lib/turn.html4.min.js', 'css/jquery.ui.html4.css'],
       both: ['css/docs.css', 'js/docs.js'],
       complete: loadApp
     });
