@@ -87,32 +87,30 @@
 
 <body>
   <div class="top_scroll_section">
-    <div class="fixed_bg"></div>
+    <div class="fixed_bg">
+      <div id="heading-text" style="height: 100vh;">
+
+      </div>
+    </div>
     <div class="big-pot">
       <img src="images/big-top.png" alt="">
     </div>
-  
+
     <div class="section_one" style="height: 300vh;">
       <div class="banner-content text-center">
-        <h1 class="heading-swap">Yet we continue to neglect it</h1>
-      </div>
-    </div>
-    <!-- <div class="section_one">
-      <div class="banner-content text-center">
-        <h1 class="heading-swap">Not anymore</h1>
+        <!-- <h1 class="heading-swap">Yet we continue to neglect it</h1> -->
       </div>
     </div>
     <div class="section_one">
-      <div class="banner-content">
-        <h1 class="heading">Hello Heal</h1>
-        <p class="mb-4 card-text">
-          Heal is an immersive, multi-sensory meditation portal to <br>
-          improve mental health and sustain peak performance.
-        </p>
-        <a href="#home" style="text-decoration: none; color:#fb5608"> <img src="images/icons/icons8-right-arrow-50.png"
-            alt="" style="width: 2%;"> See More</a>
+      <div class="banner-content text-center">
+        <!-- <h1 class="heading-swap">Not anymore</h1> -->
       </div>
-    </div> -->
+    </div>
+    <div class="section_one">
+      <div id="last-banner" class="banner-content">
+
+      </div>
+    </div>
   </div>
 
   <!-- for responsive -->
@@ -681,24 +679,52 @@
     $(document).scroll(function () {
 
       let scroll_count = $(this).scrollTop();
-      if (scroll_count < 2000 && scroll_count > 600) {
-        $('.big-pot').css('opacity', scroll_count / 1500);
-        $('.big-pot').css('right', scroll_count * 100 / 1500);
-      } else {
-        
+      if(scroll_count < 600){
         $('.big-pot').css('opacity', 0);
       }
+      else if (scroll_count < 2000 && scroll_count > 600) {
+        console.log(scroll_count / 1500);
+        $('.big-pot').css('opacity', scroll_count / 1500);
+        $('.big-pot').css('right', scroll_count * 100 / 1500);
+      }
+       
+      if (scroll_count <= 500) {
+        $('#heading-text').html("<div style='height:100vh' class='text-center d-flex justify-content-center  align-items-center'><h1  class='heading-swap'>Mental health is more of a <br> priority now than ever before</h1></div>");
+        $('#heading-text').css('opacity', scroll_count / 600);
+      } else if (scroll_count > 500 && scroll_count <= 800) {
+        $('#heading-text').css('opacity', scroll_count / 600);
+
+        $('#heading-text').html("<div style='height:100vh' class='text-center d-flex justify-content-center  align-items-center'><h1  class='heading-swap '>Yet we continue to neglect it</h1></div>")
+        $('#heading-text').css('opacity', scroll_count / 900);
+      } else if (scroll_count > 800 && scroll_count <= 1500) {
+        $('#heading-text').html("<div style='height:100vh' class='text-center d-flex justify-content-center  align-items-center'><h1  class='heading-swap'>Not anymore</h1></div>")
+        $('#heading-text').css('opacity', scroll_count / 1500);
+      } else if (scroll_count > 1500 && scroll_count <= 2000) {
+        
+        $('#heading-text').css('opacity', scroll_count / 2000);
+        $('#heading-text').html(`<div style='height:100vh' class="d-flex flex-column justify-content-center align-items-start ms-5 "> <h1 class='heading'>Hello Heal</h1>
+        <p class='mb-4 card-text'>
+          Heal is an immersive, multi-sensory meditation portal to <br>
+          improve mental health and sustain peak performance.
+        </p>
+        <a href='#home' style='text-decoration: none; color:#fb5608'> <img src='images/icons/icons8-right-arrow-50.png'
+            alt=''' style='width: 2%;'> See More</a></div>`)
+        $('#heading-text').css('opacity', scroll_count / 2000);
+      }
+
+
       if (scroll_count <= 300) {
-        console.log('1');
         $('.fixed_bg').css('background-image', 'url(images/animation-4.png)')
       } else if (scroll_count > 300 && scroll_count <= 600) {
-        console.log('2');
         $('.fixed_bg').css('background-image', 'url(images/animation-3.png)')
       } else if (scroll_count > 600 && scroll_count <= 900) {
-        console.log('3');
         $('.fixed_bg').css('background-image', 'url(images/animation-2.png)')
+      } else if (scroll_count > 900 && scroll_count <= 1500) {
+
+        $('#last-banner').css('opacity', scroll_count / 1500);
+        $('.fixed_bg').css('background-image', 'url(images/animation-1.png)');
       } else {
-        console.log('4');
+        $('#last-banner').css('opacity', scroll_count / 2000);
         $('.fixed_bg').css('background-image', 'url(images/animation-1.png)')
       }
     });
