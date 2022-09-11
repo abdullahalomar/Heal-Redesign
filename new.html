@@ -83,9 +83,12 @@
       transition: 1s linear;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 768px) {
       .big-pot {
         display: none
+      }
+      #header_html{
+        left:5%
       }
     }
   </style>
@@ -206,10 +209,8 @@
   </section>
   <!-- top section end -->
   <!-- mobile top section -->
-  <section class="container-fluid">
-    <div class="res-banner-img" style="background-image: url(images/Banner_Image-res.png);">
-
-    </div>
+  <section class="container-fluid position-relative res-banner-top">
+    <div class="res-banner-img" style="background-image: url(images/Banner_Image-res.png);"></div>
     <div class="mt-5" style="margin-left: 60px;">
       <p><span class="color-text">Welcome Home</span></p>
       <h1 class="heading">Your Personal <br> Wellness Retreat</h1>
@@ -715,7 +716,7 @@
       } else if (scroll_count > 600 && scroll_count <= 900) {
         $('.top_scroll_section').css('background-image', 'url(images/animation-2.png)')
         $('#header_html').html("<h1  class='heading-swap'>Not anymore</h1>");
-      } else if (scroll_count > 900 && scroll_count <= 1500) {
+      } else if (scroll_count > 900 && scroll_count <= 2000) {
         $('.top_scroll_section').css('background-image', 'url(images/animation-1.png)')
         $('#header_html').html(`<div class="d-flex flex-column justify-content-center align-items-start ms-5 "> <h1 class='heading'>Hello Heal</h1>
         <p class='mb-4 card-text'>
