@@ -3,6 +3,10 @@ body {
 	padding: 0;
 	font-family: 'Inter', sans-serif;
 }
+/* side-bar */
+.side-bar{
+  z-index: -1;
+}
 /* swap */
 .spread-out {
 	margin-top: 50vh;
